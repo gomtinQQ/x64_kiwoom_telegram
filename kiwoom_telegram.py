@@ -26,6 +26,8 @@ class Kiwoom():
 
     def CommConnect(self):
         self.ocx.dynamicCall("CommConnect()")
+    def CommTerminate(self):
+        self.ocx.dynamicCall("CommTerminate()")
 
 
 class MainWindow(QMainWindow, form_class):
