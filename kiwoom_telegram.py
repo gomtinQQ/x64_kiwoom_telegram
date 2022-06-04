@@ -28,22 +28,22 @@ class Kiwoom():
         self.ocx.dynamicCall("CommConnect()")
 
 
-class HelloWindow(QMainWindow, form_class):
+class MainWindow(QMainWindow, form_class):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
 
         self.axWindow = Kiwoom()
-        self.btn_login.clicked.connect(self.btnClicked)
+        self.btn_login.clicked.connect(self.btn_login_Clicked)
 
 
-    def btnClicked(self):
+    def btn_login_Clicked(self):
         self.axWindow.CommConnect()
 
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
-    mainWin = HelloWindow()
+    mainWin = MainWindow()
     mainWin.show()
     sys.exit(app.exec_())
 
