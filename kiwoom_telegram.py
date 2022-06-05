@@ -1,5 +1,4 @@
-﻿# 64bit veersion
-# ext librarys
+﻿# ext librarys
 # pip install PyQt5
 # pip install requests
 # Save as UNICODE UTF-8 signed
