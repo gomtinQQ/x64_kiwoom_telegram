@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>491</width>
-    <height>399</height>
+    <height>434</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -99,23 +99,13 @@
      <string>조건검색목록</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="comboBox_condList">
     <property name="geometry">
      <rect>
       <x>150</x>
       <y>116</y>
       <width>311</width>
       <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QListView" name="listView_msg">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>191</y>
-      <width>431</width>
-      <height>151</height>
      </rect>
     </property>
    </widget>
@@ -133,6 +123,9 @@
     </property>
    </widget>
    <widget class="QPushButton" name="btn_stop">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -143,6 +136,42 @@
     </property>
     <property name="text">
      <string>검색중지</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="list_findItems">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>221</y>
+      <width>451</width>
+      <height>171</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>190</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>발견종목수 : </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_findCount">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>190</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
     </property>
    </widget>
   </widget>
