@@ -160,7 +160,7 @@ class MainWindow(QMainWindow, form_class):
             self.act_condName = name_index[1]
             self.act_condIndex = int(name_index[0])
 
-            # 실시간 조건검색경우 마ㅣ막 변수를 1로 설정
+            # 실시간 조건검색경우 마지막 변수를 1로 설정
             ret = self.axWindow.SendCondition("2001", self.act_condName, self.act_condIndex, 0)
             if ret == 1:
                 self.btn_start.setEnabled(False)
