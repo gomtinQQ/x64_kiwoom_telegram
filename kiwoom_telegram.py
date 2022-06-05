@@ -186,10 +186,7 @@ class MainWindow(QMainWindow, form_class):
         """
         token = self.lineEdit_telegram_token.text()
         chat_id = self.lineEdit_telegram_chat_ID.text()
-        URL = 'https://api.telegram.org'
-        URL += '/bot'
-        URL += token
-        URL += '/sendMessage'
+        URL = 'https://api.telegram.org/bot{token}/sendMessage'.format(token=token)
         data = {'chat_id' : chat_id,
                 'text' : text
             }
