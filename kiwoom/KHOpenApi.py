@@ -25,7 +25,7 @@ class KHOpenApi(object):
         return self.ocx.dynamicCall("CommRqData(QString, QString, int, QString)", sRQName, sTrCode, nPrevNext, sScreenNo)
 
     def GetLoginInfo(self, sTag) -> str:
-        return self.ocx.dynamicCall("GetLoginInfo(QString)", [sTag])
+        return self.ocx.dynamicCall("GetLoginInfo(QString)", sTag)
 
     def SendOrder(self, sRQName, sScreenNo, sAccNo, nOrderType, sCode, nQty, nPrice, sHogaGb, sOrgOrderNo) -> int:
         return self.ocx.dynamicCall("SendOrder(QString, QString, QString, int, QString, int, int, QString, QString)",
