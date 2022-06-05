@@ -4,7 +4,6 @@
 # pip install requests
 # Save as UNICODE UTF-8 signed
 
-import json
 import sys
 import configparser
 import requests
