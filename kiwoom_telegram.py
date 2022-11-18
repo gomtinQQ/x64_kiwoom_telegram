@@ -1,12 +1,12 @@
-﻿# ext librarys
-# pip install PyQt5
-# pip install requests
+﻿# Python Environments / Add Environment... / 64bit setting
+# ext librarys from requirements.txt
 # Save as UNICODE UTF-8 signed
 
 import sys
 import configparser
 import requests
 import json
+import time
 
 from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtWidgets import QMainWindow
@@ -138,9 +138,16 @@ class MainWindow(QMainWindow, form_class):
         로그아웃 요청
         로그인 되어 있는 경우에만 호출
         """
-        if self.axWindow.GetConnectState() == 1:
-            self.axWindow.CommTerminate()
-            pass
+        tmStart = time.perf_counter_ns()
+        ret = self.axWindow.GetFutureList()
+        tmStop = time.perf_counter_ns()
+        print(tmStart)
+        print(ret)
+        print(tmStop - tmStart)
+
+        #if self.axWindow.GetConnectState() == 1:
+        #    self.axWindow.CommTerminate()
+        #    pass
 
     def btn_start_Clicked(self):
         """
